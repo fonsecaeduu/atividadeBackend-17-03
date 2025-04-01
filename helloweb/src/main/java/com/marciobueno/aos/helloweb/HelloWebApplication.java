@@ -2,6 +2,8 @@ package com.marciobueno.aos.helloweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class HelloWebApplication {
@@ -10,4 +12,8 @@ public class HelloWebApplication {
 		SpringApplication.run(HelloWebApplication.class, args);
 	}
 
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
 }
